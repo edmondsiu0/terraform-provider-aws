@@ -1,5 +1,14 @@
 ## 4.64.0 (Unreleased)
 
+BREAKING CHANGES:
+
+* data-source/aws_iam_policy_document: `source_json` and `override_json` have been removed -- use `source_policy_documents` and `override_policy_documents`, respectively, instead ([#30829](https://github.com/hashicorp/terraform-provider-aws/issues/30829))
+* resource/aws_autoscaling_attachment: `alb_target_group_arn` has been removed -- use `lb_target_group_arn` instead ([#30828](https://github.com/hashicorp/terraform-provider-aws/issues/30828))
+
+NOTES:
+
+* resource/aws_autoscaling_attachment: Update configurations to use `lb_target_group_arn` instead of `alb_target_group_arn` which has been removed ([#30828](https://github.com/hashicorp/terraform-provider-aws/issues/30828))
+
 FEATURES:
 
 * **New Data Source:** `aws_dms_endpoint` ([#30717](https://github.com/hashicorp/terraform-provider-aws/issues/30717))
@@ -21,6 +30,7 @@ ENHANCEMENTS:
 * data-source/aws_kms_key: Add `cloud_hsm_cluster_id`, `custom_key_store_id`, `key_spec`, `pending_deletion_window_in_days`, and `xks_key_configuration` attributes ([#29250](https://github.com/hashicorp/terraform-provider-aws/issues/29250))
 * data-source/aws_lakeformation_data_lake_settings: Add `allow_external_data_filtering`, `external_data_filtering_allow_list` and `authorized_session_tag_value_list` attributes ([#30207](https://github.com/hashicorp/terraform-provider-aws/issues/30207))
 * data-source/aws_outposts_outpost: Add `lifecycle_status`, `site_arn`, `supported_hardware_type` and `tags` attributes ([#30754](https://github.com/hashicorp/terraform-provider-aws/issues/30754))
+* data-source/aws_servicequotas_service_quota: Add `usage_metric` attribute ([#29499](https://github.com/hashicorp/terraform-provider-aws/issues/29499))
 * data-source/aws_subnet: Add `enable_lni_at_device_index` attribute ([#30798](https://github.com/hashicorp/terraform-provider-aws/issues/30798))
 * resource/aws_cloudfront_response_headers_policy: Add `remove_headers_config` argument ([#28940](https://github.com/hashicorp/terraform-provider-aws/issues/28940))
 * resource/aws_cloudwatch_event_target: Add `ecs_target.ordered_placement_strategy` argument ([#28384](https://github.com/hashicorp/terraform-provider-aws/issues/28384))
@@ -43,6 +53,7 @@ ENHANCEMENTS:
 * resource/aws_s3_bucket: Correct S3 Object Lock error handling for third-party S3-compatible API implementations ([#26317](https://github.com/hashicorp/terraform-provider-aws/issues/26317))
 * resource/aws_s3_bucket_object_lock_configuration: Correct error handling for third-party S3-compatible API implementations ([#26317](https://github.com/hashicorp/terraform-provider-aws/issues/26317))
 * resource/aws_securityhub_account: Add `control_finding_generator`, `auto_enable_controls` and `arn` attributes ([#30692](https://github.com/hashicorp/terraform-provider-aws/issues/30692))
+* resource/aws_servicequotas_service_quota: Add `usage_metric` attribute ([#29499](https://github.com/hashicorp/terraform-provider-aws/issues/29499))
 * resource/aws_ssoadmin_account_assignment: Extend timeout delay and min timeout ([#25849](https://github.com/hashicorp/terraform-provider-aws/issues/25849))
 * resource/aws_ssoadmin_permission_set: Extend timeout delay and min timeout ([#25849](https://github.com/hashicorp/terraform-provider-aws/issues/25849))
 * resource/aws_subnet: Add `enable_lni_at_device_index` attribute ([#30798](https://github.com/hashicorp/terraform-provider-aws/issues/30798))
