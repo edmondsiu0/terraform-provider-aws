@@ -24,6 +24,7 @@ FEATURES:
 * **New Data Source:** `aws_sesv2_configuration_set` ([#30108](https://github.com/hashicorp/terraform-provider-aws/issues/30108))
 * **New Resource:** `aws_cloudwatch_event_endpoint` ([#25846](https://github.com/hashicorp/terraform-provider-aws/issues/25846))
 * **New Resource:** `aws_vpclattice_listener` ([#30711](https://github.com/hashicorp/terraform-provider-aws/issues/30711))
+* **New Resource:** `aws_vpclattice_listener_rule` ([#30784](https://github.com/hashicorp/terraform-provider-aws/issues/30784))
 
 ENHANCEMENTS:
 
